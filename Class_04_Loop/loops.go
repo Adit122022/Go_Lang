@@ -4,35 +4,39 @@ import "fmt"
 
 func main() {
 
-	//  while loop
-	// i := 0
-	// for i<=3{
-	// 	fmt.Println(" Iteration :",i)
-	// 	i+=1
-	// }
-
-	// sum of n digits of number ;
-	// var sum = 0
-	// var n = 10
-	// for 0 < n {
-	// 	var temp = n % 10
-	// 	sum += temp
-	// 	n = n / 10
-	// }
-	// fmt.Println(sum)
-
-	//  classic for loop
-	//  for i:=0; i <=3;i++{
-	// 	if(i ==2) {
-	// 		continue
-	// 	}
-	// 	fmt.Println(i)
-	//  }
-
-	//  range key word introduced in 1.2 version of go
-	for i := range 3{
-		fmt.Println(i)
+	// --- 1. Standard For Loop ---
+	// Similar to C/Java/JS loops
+	fmt.Println("--- Standard Loop ---")
+	for i := 0; i < 5; i++ {
+		fmt.Printf("Iteration: %d\n", i)
 	}
 
+	// --- 2. While-Style Loop ---
+	// Go doesn't have 'while'. We use 'for' with a condition.
+	fmt.Println("\n--- While-Style Loop ---")
+	n := 1
+	for n <= 3 {
+		fmt.Printf("Count: %d\n", n)
+		n++
+	}
 
+	// --- 3. Infinite Loop ---
+	// 'for' without any condition loops forever. Use 'break' to exit.
+	fmt.Println("\n--- Infinite Loop ---")
+	count := 0
+	for {
+		if count >= 3 {
+			fmt.Println("Breaking out of infinite loop!")
+			break
+		}
+		fmt.Println("Looping...")
+		count++
+	}
+
+	// --- 4. Range Loop (Go 1.22+) ---
+	// Iterating over a range of integers directly
+	fmt.Println("\n--- Range Loop ---")
+	for i := range 3 {
+		fmt.Printf("Range index: %d\n", i)
+	}
 }

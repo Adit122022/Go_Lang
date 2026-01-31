@@ -1,8 +1,17 @@
-# Variables and Data Types in Go
+# **Class 02 - Variables and Data Types**
 
-Go is a statically typed language, which means that the type of every variable is known at compile time. This helps catch errors early and improves performance.
+> #### **\_[Go](https://go.dev/) 🚀 by [Google](https://google.com). Welcome to the **Go Lang Learning Journey\*\* repository!
 
-## 📦 Variables
+## 📂 **Table of Contents**
+
+- [Variables](#-variables)
+- [Basic Data Types](#-basic-data-types)
+- [Constants](#-constants)
+- [Learn More](#-learn-more)
+
+---
+
+## 📦 **Variables**
 
 In Go, variables are used to store values. You can declare them in a few different ways.
 
@@ -35,21 +44,17 @@ age := 10         // Int
 
 ---
 
-## 🔢 Basic Data Types
+## 🔢 **Basic Data Types**
 
 Go has several built-in types. Here are the most common ones:
 
+> **Note**: Go is statically typed, meaning variable types are known at compile time.
+
 ### Integers (`int`)
 
-Integers are whole numbers.
-
-- **`int`**: The size depends on the system (32-bit on 32-bit systems, 64-bit on 64-bit systems).
-- **Explicit Sized Integers**:
-  - `int8` (8-bit signed integer)
-  - `int16` (16-bit signed integer)
-  - `int32` (32-bit signed integer)
-  - `int64` (64-bit signed integer)
-- **Unsigned Integers**: `uint`, `uint8`, `uint16`, `uint32`, `uint64` (only positive numbers).
+- **`int`**: Platform dependent (32 or 64 bit).
+- **Explicit Sized**: `int8`, `int16`, `int32`, `int64`.
+- **Unsigned**: `uint`, `uint8`, etc.
 
 ```go
 var x int = 10
@@ -58,10 +63,8 @@ var y int64 = 50000
 
 ### Floating Point Numbers (`float`)
 
-Used for numbers with decimals.
-
 - **`float32`**: 32-bit floating-point number.
-- **`float64`**: 64-bit floating-point number (Default for floating-point values).
+- **`float64`**: 64-bit floating-point number (Default).
 
 ```go
 var pi float32 = 3.14
@@ -74,7 +77,6 @@ Represents a true or false value.
 
 ```go
 var b bool = false
-fmt.Println("Boolean value:", b)
 ```
 
 ### Strings (`string`)
@@ -83,14 +85,13 @@ A sequence of characters.
 
 ```go
 var str string = "Hello World"
-fmt.Println("String value:", str)
 ```
 
 ---
 
-## 🔒 Constants
+## 🔒 **Constants**
 
-Constants are variables whose values cannot be changed after they are defined. They are declared using the `const` keyword.
+Constants are variables whose values cannot be changed after they are defined.
 
 ```go
 const name = "Go Lang" // This cannot be changed
@@ -104,12 +105,11 @@ const (
     port = 8080
     host = "localhost"
 )
-fmt.Printf("Constant port %d and host is %s\n", port, host)
 ```
 
 ---
 
-## 📚 Learn More
+## 📚 **Learn More**
 
 For detailed information and the official specification, check out these resources from the Go website:
 

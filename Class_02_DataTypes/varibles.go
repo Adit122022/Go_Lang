@@ -30,7 +30,8 @@ func main() {
 	// --- 6. Constants ---
 	// Constants cannot be changed once declared
 	const name = "Go Lang" // Typed constant
-
+	
+	// const group
 	const (
 		port = 8080
 		host = "localhost"
